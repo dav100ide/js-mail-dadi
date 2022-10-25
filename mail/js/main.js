@@ -6,12 +6,11 @@
 const userMail = document.getElementById('user-email').value;
 const validMails = ['pippo@gmail.com', 'marco@gmail.com', 'ciao@gmail.com', 'boolean@gmail.com'];
 const verifyBtn = document.getElementById('verify-mail');
-console.log(userMail);
-// verifyBtn.addEventListener('click', function () {
-//    const validMail = validMails[i];
-//    if (userMail === validMail[i]) {
-//       console.log('ok');
-//    } else {
-//       console.log('non valida');
-//    }
-// });
+verifyBtn.addEventListener('click', function () {
+   console.log(userMail);
+   if (userMail === validMails) {
+      console.log('ok');
+   } else {
+      console.log('non valida');
+   }
+});
