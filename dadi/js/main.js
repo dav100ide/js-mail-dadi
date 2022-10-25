@@ -19,13 +19,13 @@ document.getElementById('user-number-box').innerHTML = `tu: ${userNumber}`;
 
 const btnResult = document.getElementById('btn-result');
 btnResult.addEventListener('click', function () {
-   let result = document.getElementById('result').innerHTML;
+   let result = document.getElementById('result');
    if (cpuNumber > userNumber) {
-      result = 'ha vinto il computer';
+      result.innerHTML = 'ha vinto il computer';
    } else if (userNumber > cpuNumber) {
-      result = 'hai vinto tu!';
+      result.innerHTML = 'hai vinto tu!';
    } else {
-      result = 'pareggio, i numeri sono uguali';
+      result.innerHTML = 'pareggio, i numeri sono uguali';
    }
 });
 console.log(result);
