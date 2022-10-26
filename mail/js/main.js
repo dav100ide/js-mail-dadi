@@ -7,14 +7,19 @@ const validMails = ['pippo@gmail.com', 'marco@gmail.com', 'ciao@gmail.com', 'boo
 const verifyBtn = document.getElementById('verify-mail');
 verifyBtn.addEventListener('click', function () {
    const userMail = document.getElementById('user-email').value;
+
+   let found = false;
+
    for (let i = 0; i < validMails.length; i++) {
       let message = document.getElementById('message');
       const validMail = validMails[i];
       if (userMail === validMail) {
-         message.innerHTML = 'la mail è valida.';
-         break;
-      } else {
-         message.innerHTML = 'la mail NON è valida.';
+         found = true;
       }
+   }
+   if (found) {
+      message.innerHTML = 'la mail è valida.';
+   } else {
+      message.innerHTML = 'la mail NON è valida.';
    }
 });
